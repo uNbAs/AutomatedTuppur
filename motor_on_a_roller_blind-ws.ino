@@ -15,8 +15,8 @@
 
 //--------------- CHANGE PARAMETERS ------------------
 //Configure Default Settings for Access Point logon
-String APid = "HoMeRooT3D";    //Name of access point
-String APpw = "T3t45Al4iR3";   //Hardcoded password for access point
+String APid = "YourSSID";    //Name of access point
+String APpw = "YourPass";   //Hardcoded password for access point
 
 //----------------------------------------------------
 
