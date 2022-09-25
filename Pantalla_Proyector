@@ -1,0 +1,22 @@
+#!/bin/bash
+set -x
+## who am i? ##
+_script="$(readlink -f ${BASH_SOURCE[0]})"
+ 
+## Delete last component from $_script ##
+_base="$(dirname $_script)"
+ 
+## Okay, print it ##
+echo "Script name : $_script"
+echo "Current working dir : $PWD"
+echo "Script location path (dir) : $_base"
+
+if [ "$1" == "subir" ]; then
+echo 0 > $_base/.Pantalla
+pwd
+$_base/./websocat ws://192.168.10.144:81/ open-async:$_base/.Pantalla --text
+
+elif [ "$1" == "bajar" ]; then
+echo 100 > $_base/.Pantalla
+$_base/./websocat ws://192.168.10.144:81/ open-async:$_base/.Pantalla --text
+fi
